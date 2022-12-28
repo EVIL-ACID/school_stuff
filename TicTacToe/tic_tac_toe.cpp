@@ -43,7 +43,7 @@ void initBoard(char board[][COLS])
 	{
 		for(int j = 0; j < COLS; ++j)
 		{
-			board[i][j] = '-';	
+			board[i][j] = '.';	
 		}	
 	}
 
@@ -56,7 +56,7 @@ void displayBoard(char board[][COLS])
 	{
 		for(int j = 0; j < COLS; ++j)
 		{
-			std::cout << board[i][j];
+			std::cout << " " << board[i][j] << " ";
 		}
 		std::cout << "\n";
 	}
@@ -155,7 +155,7 @@ void runGame()
 			displayBoard(board);
 			if(checkWin(board, xo[turn]))
 			{
-				std::cout << "Player " << xo[turn] << " won!!\n";
+				std::cout << "Player " << xo[turn] << " wins!!\n";
 				win = true;
 			}
 
